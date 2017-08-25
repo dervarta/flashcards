@@ -38,6 +38,8 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         
         questionLabel.text = "Question \(CardCollection.instance.currentIndex + 1)/\(CardCollection.instance.cards.count)"
         
+        //make sure the options are for this card
+        answerPickerView.reloadAllComponents()
     }
 
     // Pickerview Data Source
@@ -73,6 +75,10 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
             alert.addAction(UIAlertAction(title: "Boo!", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true)
         }
+        
+        CardCollection.instance.nextQuestion()
+        //now that the data has been updated, we need to setup the new card
+        setupCard()
     }
     
 }
