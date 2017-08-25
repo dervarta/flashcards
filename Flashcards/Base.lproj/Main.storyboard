@@ -62,6 +62,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bRs-uR-l9F" secondAttribute="trailing" id="WhR-JW-g7g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerPickerView" destination="u6p-pS-YC5" id="Lxs-fn-ElW"/>
+                        <outlet property="questionLabel" destination="Ew0-37-GEu" id="YyZ-OG-raK"/>
+                        <outlet property="questionTextView" destination="eMJ-hH-pEc" id="BjS-IU-bBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
